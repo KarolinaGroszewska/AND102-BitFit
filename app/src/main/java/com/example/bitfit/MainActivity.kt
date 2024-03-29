@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity(), JournalAdapter.JournalClickListener {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         adapter = JournalAdapter(this, this)
         binding.recyclerView.adapter = adapter
+        binding.recyclerView.isNestedScrollingEnabled = false;
+
 
         val getContent =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
