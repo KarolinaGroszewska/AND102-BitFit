@@ -4,17 +4,19 @@ Submitted by: **Kari Groszewska**
 
 **BitFit** is a health metrics app that allows users to track their diary entries in a journal
 
-Time spent: **3** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
-
 - [X] **At least one health metric is tracked (based on user input)**
   - Chosen metric(s): diary entries
 - [X] **There is a "create entry" UI that prompts users to make their daily entry**
 - [X] **New entries are saved in a database and then updated in the RecyclerView**
 - [X] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
+
+The following **optional** features are implemented:
+- [X] Improve and customize the user interface through styling and coloring
 
 ## Video Walkthrough
 
