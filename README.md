@@ -2,26 +2,19 @@
 
 Submitted by: **Kari Groszewska**
 
-**BitFit** is a health metrics app that allows users to track ... [TODO] 
+**BitFit** is a health metrics app that allows users to track their diary entries in a journal
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **At least one health metric is tracked (based on user input)**
-  - Chosen metric(s): `[TODO: FILL ME IN TO GET CREDIT]`
-- [ ] **There is a "create entry" UI that prompts users to make their daily entry**
-- [ ] **New entries are saved in a database and then updated in the RecyclerView**
-- [ ] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
- 
-The following **optional** features are implemented:
-
-- [ ] **Create a UI for tracking averages and trends in metrics**
-- [ ] **Improve and customize the user interface through styling and coloring**
-- [ ] **Implement orientation responsivity**
-- [ ] **Add a daily photo feature**
+- [X] **At least one health metric is tracked (based on user input)**
+  - Chosen metric(s): diary entries
+- [X] **There is a "create entry" UI that prompts users to make their daily entry**
+- [X] **New entries are saved in a database and then updated in the RecyclerView**
+- [X] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
 
 ## Video Walkthrough
 
@@ -38,7 +31,7 @@ GIF created with Giphy Capture
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had a tough time with the settings in Room and setting the appropriate version and dependencies – the errors I was receiving were not really the errors I had which made it a lot harder to debug.
 
 ## License
 
