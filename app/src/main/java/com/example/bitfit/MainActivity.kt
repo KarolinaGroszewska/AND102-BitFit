@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -56,11 +57,24 @@ class MainActivity : AppCompatActivity(), JournalAdapter.JournalClickListener {
                 }
             }
 
-        binding.fabAddJournal.setOnClickListener {
-            val intent = Intent(this, AddJournalActivity::class.java)
-            getContent.launch(intent)
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.home_page -> {
+                    // Handle home page navigation
+                    true
+                }
+                R.id.summary_page -> {
+                    // Handle summary page navigation
+                    true
+                }
+                R.id.add_page -> {
+                    val intent = Intent(this, AddJournalActivity::class.java)
+                    getContent.launch(intent)
+                    true
+                }
+                else -> false
+            }
         }
-
     }
 
     private val updateOrDeleteTodo =
@@ -70,14 +84,11 @@ class MainActivity : AppCompatActivity(), JournalAdapter.JournalClickListener {
                 val isDelete = result.data?.getBooleanExtra("delete_journal", false) as Boolean
                 if (journal != null && !isDelete) {
                     viewModel.updateJournal(journal)
-                }else if(journal != null && isDelete){
+                } else if (journal != null && isDelete) {
                     viewModel.deleteJournal(journal)
                 }
             }
         }
-
-
-
     override fun onItemClicked(journal: Journal) {
         val intent = Intent(this@MainActivity, AddJournalActivity::class.java)
         intent.putExtra("current_journal", journal)
